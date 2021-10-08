@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Api I</title>
+    <style>
+        /* body{
+            background-color: black;
+        } */
+        #navBar1{
+            height: 40px;
+            width: 100%;
+            display: flex;
+        }
+        #lines{
+            padding-top: 30px;
+        }
+        #logo{
+            padding-top: 5px;
+        }
+        #searchInput{
+            height: 40px;
+            width: 40%;
+            /* background-color: black; */
+            border: .2px solid rgb(202, 198, 198);
+            margin-top: 30px;
+            margin-left: 10%;
+            margin-right: 8px;
+        }
+        #searchInput > input{
+            height: 35px;
+            width: 100%;
+            /* background-color: black; */
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            /* margin-left: 10%; */
+        }
+        #srchBtn{
+            height: 40px;
+            width: 60px;
+            background-color: rgb(242, 238, 238);
+            color: white;
+            margin-top: 30px;
+            border: .2px solid grey;
+            text-align: center;
+        }
+        #btn{
+            height: 41px;
+            width: 100%;
+            background-color: rgb(250, 246, 246);
+            color: white;
+            /* margin-top: 30px; */
+            border: .3px solid rgb(223, 220, 220);
+            font-size: 30px;
+            /* margin-left: 2px; */
+        }
+        #micLogo{
+            padding-top: 30px;
+        }
+        #micLogo > img{
+            border-radius: 20px;
+        }
+        #cameraLogo{
+            padding-top: 32px;
+            margin-left: 15%;
+        }
+        #grid{
+            padding-top: 32px;
+            margin-left: 8px;
+        }
+        #bell{
+            padding-top: 32px;
+            margin-left: 8px;
+        }
+        #userImg{
+            padding-top: 32px;
+            margin-left: 8px;
+            
+        }
+        #userImg > img{
+            border-radius: 20px;
+            margin-left: 8px;
+        }
+        .line{
+            height: 0.5px;
+            width: 100%;
+            background-color: grey;
+            margin-top: 55px;
+        }
+        #navBar2{
+            height: 65px;
+            display: flex;
+            border-bottom: .3px solid grey;
+            padding-left:10%;
+            padding-top: 10px;
+        }
+       .nv2{
+           background-color: whitesmoke;
+           border: 0.3px solid grey;
+           border-radius: 30px;
+           height: 30px;
+           width: 16%;
+           margin: 1%;
+           text-align: center;
+           font-size: 20px;
+           padding-top: 5px;
+           overflow: hidden;
+       }
+       #side{
+           width: 10%;
+           /* flex-basis: 10%;
+           display: flex;
+           flex-direction:column; */
+         
+           float: left;
+       }
+       #mainContent{
+           width: 89%;
+           border-left: 1px solid gray;
+           float: left;
+       }
+
+       #home{
+            padding-top: 32px;
+            margin-left: 8px;
+            
+        }
+        #home > img{
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            margin-left: 8px;
+        }
+        #hometext{
+            margin-left: 18px;
+        }
+    
+       #explore{
+            padding-top: 32px;
+            margin-left: 4px;
+            
+        }
+        #explore > img{
+            height: 60px;
+            width: 60px;
+            border-radius: 20px;
+            /* //margin-left: 2px; */
+        }
+        #exploretext{
+            margin-left:10px;
+        }
+        
+       #subscribe{
+            padding-top: 32px;
+            margin-left: 4px;
+            
+        }
+        #subscribe > img{
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            margin-left: 8px;
+        }
+
+        /* #subscribetext{
+            margin-left:2px;
+        } */
+        
+       #library{
+            padding-top: 32px;
+            margin-left: 4px;
+            
+        }
+        #library > img{
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            margin-left: 8px;
+        }
+
+        #librarytext{
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navBar1">
+        <div id="lines">
+            <img src="https://css-tricks.com/wp-content/uploads/2012/10/threelines.png" height="40px" width="60px">
+        </div>
+        <div id="logo">
+            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/08/30/14/youtube-new-logo.png?width=982&height=726&auto=webp&quality=75" height="90px" width="120px">
+        </div>
+        <div id="searchInput">
+            <input type="text" name="search" id="search" placeholder="Search">
+        </div>
+        <div id="srchBtn">
+           <button id="btn"> 🔍 </button>
+        </div>
+        <div id="micLogo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Linearicons_mic.svg/1024px-Linearicons_mic.svg.png" height="40px" width="40px">
+        </div>
+        <div id="cameraLogo">
+            <img src="https://friconix.com/jpg/fi-xnluxx-videocamera.jpg" height="40px" width="40px">
+        </div>
+        <div id="grid">
+            <img src="https://icon-library.com/images/grid-icon/grid-icon-17.jpg" height="40px"width="40px">
+        </div>
+        <div id="bell">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/359/770/small_2x/bell-icon-free-vector.jpg" height="40px" width="40px">
+        </div>
+        <div id="userImg">
+            <img src="https://media.glamour.com/photos/603534855d7be6c90b6d5c90/6:7/w_1877,h_2190,c_limit/MCDTITA_FE018.jpg" height="40px" width="40px">
+        </div>
+    </div>
+    <div class="line"></div>
+    <!-- <hr id="hr"> -->
+    <div id="navBar2">
+        <!-- <div id="home"><img src="https://cdn-icons-png.flaticon.com/512/61/61972.png"></div> -->
+       
+        <div class="nv2" style="background-color: black;color: white; width: 8%;">All</div>
+        <div class="nv2">Mixes</div>
+        <div class="nv2">Music</div>
+        <div class="nv2">Yoga</div>
+        <div class="nv2">T-Series</div>
+        <div class="nv2">English</div>
+    </div>
+    <div id="side">
+        <div id="home"><img src="https://cdn-icons-png.flaticon.com/512/61/61972.png"></div>
+        <div id="hometext">Home</div>
+        <div id="explore"><img src="https://static1.bigstockphoto.com/3/8/3/large2/383314703.jpg"></div>
+        <div id="exploretext">Explore</div>
+        <div id="subscribe"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfd99NsKZEx1WNdNds0hAJ2XZMejBW6EP3Ew&usqp=CAU"></div>
+        <div id="subscribetext">Subscription</div>
+        <div id="library"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROTZCuDZK6sf7bmYFuhnSkyrAuvVtAV16K-g&usqp=CAU"></div>
+        <div id="librarytext">Library</div>
+    </div>
+    <div id="mainContent">
+
+    </div>
+
+
+</body>
+
+<script>
+window.addEventListener("load",()=>{
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", searchForUserInput);
+})
+
+var searchForUserInput = ()=>{
+    var userInput = document.getElementById("search").value;
+    if(userInput){
+        getYoutubeSerchResults(userInput)
+    }
+
+}
+
+        
+async function getYoutubeSerchResults(userInput){
+                var res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${userInput}&maxResults=20&chart=mostPopular&regionCode=IN&key=AIzaSyDAMhQzJvRxuHtyKz6KKaothqQWlrh8190`)
+                .then((res)=>{
+                    return res.json();
+                })
+                .then(res=>{
+                    // console.log(res.items);
+                    var dataArr = res.items;
+                    handleDisplay(dataArr);
+                    // for(var i=0; i<dataArr.length; i++){
+                    //     console.log(dataArr[i].id.videoId);
+                    // }
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
+                // var res = await res.json();
+                // handleDisplay(res);
+        }
+
+var handleDisplay = dataArr => {
+    var mainContent = document.getElementById("mainContent");
+    mainContent.innerHTML = "";
+
+    for(var i=0; i<dataArr.length; i++){
+        var content = document.createElement("div");
+        var videoId = dataArr[i].id.videoId;
+        content.innerHTML = `<iframe width="100%" height="250px" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        content.style.width = "24%";
+        content.style.height = "250px";
+        content.style.margin = "0.5%";
+        content.style.float = "left";
+        // var mainContent = document.getElementById("mainContent");
+        mainContent.append(content);
+    }
+}
+</script>
+
+</html>
